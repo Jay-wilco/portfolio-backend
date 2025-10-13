@@ -1,0 +1,19 @@
+name: portfolio-backend
+recipe: drupal10
+config:
+  webroot: web
+  php: "8.3"
+  composer_version: 2-latest
+
+services:
+  database:
+    type: mariadb:10.6
+    creds:
+      user: drupal
+      password: drupal
+      database: drupal
+
+tooling:
+  drush:
+    service: appserver
+    cmd: vendor/bin/drush

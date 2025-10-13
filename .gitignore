@@ -1,0 +1,14 @@
+# Dependency directories
+/vendor/
+
+# Drupal files (local configuration)
+/web/sites/*/settings.php
+/web/sites/*/services.yml
+/web/sites/simpletest/
+/web/sites/*/files/
+
+# Lando files
+.lando/
+.lando.yml.example
+.env
+.env.local
