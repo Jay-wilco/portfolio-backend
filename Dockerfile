@@ -3,6 +3,7 @@ FROM php:8.3-apache
 # System deps for PHP extensions + tools Composer uses
 RUN apt-get update && apt-get install -y \
     git unzip \
+    postgresql-client \
     libzip-dev \
     libpq-dev \
     libicu-dev \
@@ -10,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     && rm -rf /var/lib/apt/lists/*
+
 
 # PHP extensions (Drupal commonly needs these)
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
