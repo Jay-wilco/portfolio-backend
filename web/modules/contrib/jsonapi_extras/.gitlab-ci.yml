@@ -57,6 +57,10 @@ variables:
   # Ignore logo.psd file from cspell check.
   _CSPELL_IGNORE_PATHS: "\"logo.psd\""
 
+composer (next major):
+  variables:
+    _LENIENT_ALLOW_LIST: "schemata"
+
 ###################################################################################
 #
 #                                        *
