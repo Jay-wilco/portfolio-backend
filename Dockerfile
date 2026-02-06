@@ -36,6 +36,8 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 COPY . .
+COPY php/conf.d/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
+
 
 RUN composer install --no-dev --optimize-autoloader
 
